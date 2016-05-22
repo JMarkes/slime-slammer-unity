@@ -1,0 +1,17 @@
+﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+public abstract class Character : MonoBehaviour {
+
+	public int MAXHP;
+	public int HP;
+	public int STR;
+	public int DEF;
+	public int MAG;
+	public int MDF;
+
+	protected virtual void Awake() {
+
+	}
+}

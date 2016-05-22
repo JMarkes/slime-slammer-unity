@@ -1,0 +1,434 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+public class BoardManager : MonoBehaviour {
+
+	/*private Color32 blue = new Color32(34,115,171,255);
+	private Color32 purple = new Color32(160,34,171,255);
+	private Color32 red = new Color32(171,63,34,255);
+	private Color32 green = new Color32(34,171,82,255);
+	private Color32 gray = new Color32(66,57,67,255);
+	private Color32 white = new Color32(255,255,255,255);*/
+	
+	public GameObject[] tilePrefabs;
+
+	private const int ROWS = 6;
+	private const int COLUMNS = 6;
+	private const float TILE_SIZE = 128 * 0.6f;
+	private const int TILE_MARGIN = 6;
+	private const int BOARD_TOP_MARGIN = -120;
+
+	private int[,] board = new int[ROWS,COLUMNS];
+	private Transform boardHolder;
+
+	private List<Tile> tileList = new List<Tile>();
+	private int activatedTiles = 0;
+
+	private Player player;
+	private Enemy enemy;
+	private Image boardOverlay;
+
+	private enum TileType {Attack, Magic, Heal, Gold, Monster};
+
+	private int battleNo;
+	private int rankPhase;
+
+	public void CreateBoard() {
+
+		// Clear up some variables from previous quests
+		tileList.Clear();
+		battleNo = 1;
+		rankPhase = 1;
+
+		// Initialize board with -1
+		for (int r = 0; r < ROWS; r++) {
+			for (int c = 0; c < COLUMNS; c++) {
+				board[r,c] = -1;
+			}
+		}
+
+		player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+		boardOverlay = GameObject.Find("BoardOverlay").GetComponent<Image>();
+
+		boardHolder = new GameObject("Board").transform;
+		StartCoroutine(FillBoard());
+	}
+
+	private Tile GetTileAt(int row, int column) {
+		return tileList.Find(t => (t.GetRow() == row) && (t.GetColumn() == column));
+	}
+
+	public void AddTileToList (Tile tile) {
+		tileList.Add (tile);
+	}
+
+	private void CheckTiles (Tile tile, int tileType) {
+		if (tile == null) {
+			return;
+		}
+
+		Tile tileScript = tile.GetComponent<Tile>();
+		int row = tileScript.GetRow();
+		int column = tileScript.GetColumn();
+
+		if (tileScript.GetTileType() != tileType) {
+			return;
+		}
+
+		tileList.Remove(tile);
+		tile.PopOut();
+		board[row,column] = -1;
+
+		activatedTiles++;
+
+		CheckTiles (GetTileAt(row-1, column), tileType);
+		CheckTiles (GetTileAt(row+1, column), tileType);
+		CheckTiles (GetTileAt(row, column-1), tileType);
+		CheckTiles (GetTileAt(row, column+1), tileType);
+	}
+
+	private bool TilesLeftToDrop() {
+		for (int r = ROWS-1; r > 0; r--) {
+			for (int c = COLUMNS-1; c > -1; c--) {
+				if (board[r,c] == -1 && board[r-1,c] != -1)
+					return true;
+			}
+		}
+		return false;
+	}
+
+	private IEnumerator DropTiles () {
+
+		yield return new WaitForSeconds(0.2f);
+
+		while(TilesLeftToDrop()) {
+			for (int r = ROWS-1; r > 0; r--) {
+				for (int c = COLUMNS-1; c > -1; c--) {
+					if (board[r,c] == -1 && board[r-1,c] != -1) {
+						board[r,c] = board[r-1,c];
+						GetTileAt(r-1,c).Drop(1);
+						board[r-1,c] = -1;
+					}
+				}
+			}
+		}
+
+		for (int r = ROWS-1; r > 0; r--) {
+			for (int c = COLUMNS-1; c > -1; c--) {
+				if (board[r,c] != -1) {
+					GetTileAt(r,c).Move(-(TILE_SIZE+TILE_MARGIN));
+				}
+			}
+		}
+
+		StartCoroutine(FillBoard());
+	}
+
+	private int GetRandomTile() {
+		int tile = -1;
+
+		float rand = Random.value;
+		if (rand < 0.2475f) {      // 24.75% chance
+			tile = (int)TileType.Attack;
+		}
+		else if (rand < 0.495f) {  // 24.75% chance
+			tile = (int)TileType.Magic;
+		}
+		else if (rand < 0.7425f) { // 24.75%% chance
+			tile = (int)TileType.Heal;
+		}
+		else if (rand < 0.99f) {   // 24.75% chance
+			tile = (int)TileType.Gold;
+		}
+		else {                     // 1% chance
+			tile = (int)TileType.Monster;
+		}
+
+		return tile;
+	}
+
+	private int CountEmptyTiles(int column) {
+		int emptyTiles = 0;
+		for (int r = 0; r < ROWS; r++) {
+			if (board[r,column] == -1) {
+				emptyTiles++;
+				board[r,column] = GetRandomTile();
+			}
+		}
+		return emptyTiles;
+	}
+
+	IEnumerator FillBoard() {
+		GameManager.instance.tilesDropping = true;
+
+		for (int c = COLUMNS-1; c > -1; c--) {
+			int emptyTiles = CountEmptyTiles(c);
+			for (int i = 0; i < emptyTiles; i++) {
+				Vector3 pos = new Vector3(-(TILE_SIZE+TILE_MARGIN) * 2.5f + c * (TILE_SIZE+TILE_MARGIN), 
+				                          BOARD_TOP_MARGIN + (TILE_SIZE+TILE_MARGIN) * 2.5f + i * (TILE_SIZE+TILE_MARGIN), 
+				                          0);
+				int r = (emptyTiles - 1) - i;
+				GameObject instance = Instantiate(tilePrefabs[board[r,c]], pos, Quaternion.identity) as GameObject;
+				instance.GetComponent<Tile>().Init(r-emptyTiles,c,board[r,c]);
+				instance.GetComponent<Tile>().Drop(emptyTiles);
+				instance.GetComponent<Tile>().Move(-(TILE_SIZE+TILE_MARGIN));
+				instance.transform.SetParent(boardHolder);
+				yield return new WaitForSeconds(0.05f);
+			}
+		}
+
+		yield return new WaitForSeconds(0.75f);
+		GameManager.instance.tilesDropping = false;
+	}
+
+	private void ActivateTiles(int nTiles, int tileType) {
+
+		activatedTiles = 0;
+
+		switch (tileType)
+		{
+		case (int) TileType.Attack:
+			GameManager.instance.charAnimPlaying = true;
+			enemy.ReceiveDamage(nTiles, CalculateDamage(nTiles, player.GetWeaponRank(), enemy.DEF), 0);
+			break;
+		case (int) TileType.Magic:
+			GameManager.instance.charAnimPlaying = true;
+			enemy.ReceiveDamage(nTiles, CalculateDamage(nTiles, player.GetMagicRank(), enemy.MDF), 1);
+			break;
+		case (int) TileType.Heal:
+			player.Heal(CalculateHeal(nTiles));
+			StartCoroutine(CheckEnemyTurn());
+			break;
+		case (int) TileType.Gold:
+			player.GetGold(CalculateGold(nTiles));
+			StartCoroutine(CheckEnemyTurn());
+			break;
+		case (int) TileType.Monster:
+			enemy.BuffEnemy(nTiles);
+			StartCoroutine(CheckEnemyTurn());
+			break;
+		}
+	}
+
+	IEnumerator CheckEnemyTurn() {
+		yield return new WaitForSeconds(0.75f);
+		enemy.CheckTurn();
+	}
+
+	private int CalculateDamage(int nTiles, int atkStat, int defStat) {	
+		int damage = (int) Mathf.Round (10 + atkStat - defStat * 0.5f + (nTiles * 0.2f));
+		return Mathf.Max(damage,1);
+	}
+
+	private int CalculateHeal(int nTiles) {
+		//int heal = (int) Mathf.Round ((nTiles * 5) + ((nTiles-1) * 2));
+		int heal = (int) Mathf.Round(player.MAXHP * 0.05f * nTiles);
+		return heal;
+	}
+
+	private int CalculateGold(int nTiles) {
+		int gold = (int) Mathf.Round ((nTiles * 10 * rankPhase) + ((nTiles-1) * 5 * rankPhase));
+		return gold;
+	}
+
+	private void PlayTurn(int row, int column, int tileType) {
+		CheckTiles(GetTileAt(row,column), tileType);
+		StartCoroutine(DropTiles());
+		ActivateTiles(activatedTiles, tileType);
+		player.UpdateUI();
+	}
+
+	// Check if player is allowed to make a play
+	private void ToggleBoard(bool enabled) {
+		GameManager.instance.enableInteraction = enabled;
+
+		if (enabled) {
+			boardOverlay.color = new Color(0,0,0,0);
+		} else {
+			boardOverlay.color = new Color(0,0,0,0.6f); 
+		}
+	}
+
+	private bool enableBoard() {
+		return (GameManager.instance.playerRunning ||
+				GameManager.instance.tilesDropping || 
+				GameManager.instance.charAnimPlaying ||
+		        GameManager.instance.playerDead ||
+				GameManager.instance.enemyDead || 
+				GameManager.instance.levelUp) 
+				? false : true;
+	}
+
+	/*private Color32 GetTileColor(int tileType) {
+		switch (tileType) {
+		case (int) TileType.Attack:	
+			return blue;
+		case (int) TileType.Magic: 
+			return purple;
+		case (int) TileType.Heal: 
+			return red;
+		case (int) TileType.Gold: 
+			return green;
+		case (int) TileType.Monster:
+			return gray;
+		default: 
+			return white;
+		}
+	} 
+	
+	private string GetTileType(int tileType) {
+		switch (tileType) {
+		case (int) TileType.Attack:	
+			return "ATTACK";
+		case (int) TileType.Magic: 
+			return "MAGIC";
+		case (int) TileType.Heal: 
+			return "HEAL";
+		case (int) TileType.Gold: 
+			return "GOLD";
+		case (int) TileType.Monster:
+			return "ENEMY BUFF";
+		default: 
+			return "ERROR";
+		}
+	}*/
+
+	private void SpawnNextEnemy() {
+		GameManager.instance.enemyDead = false;
+		InstantiateEnemy();
+		GameManager.instance.playerRunning = true;
+	}
+
+	private void InstantiateEnemy() {
+		// Instantiate random enemy type
+		int randEnemy = GetEnemyType();
+		Instantiate(Resources.Load("Prefabs/Enemies/" + GetEnemyName(randEnemy)), new Vector3(360,184,-8), Quaternion.identity);
+
+		GameObject enemyInstance = GameObject.FindGameObjectWithTag("Enemy");
+		enemy = enemyInstance.GetComponent<Enemy>();
+
+		// Randomly scale enemy
+		int randScale = Random.Range(8,13);
+		enemyInstance.transform.localScale = new Vector3(randScale/10f, randScale/10f, randScale/10f);
+
+		// Apply the appropriate rank for the enemy (sprite and stats)
+		int randRank = GetEnemyRank();
+		enemyInstance.GetComponent<Animator>().SetInteger("Slime Rank",randRank);
+
+		enemy.ApplyStats(randRank);
+
+		// Move newly spawned enemy towards the player
+		enemy.Move(new Vector3 (105, 184, -8), 2);
+	}
+
+	private int GetEnemyType() {
+		int enemyType = -1;
+
+		// First 2 battles are always against plain slimes
+		if (++battleNo <= 3) return 0;
+
+		float rand = Random.value;
+		if (rand < 0.19f) {       // 19% chance
+			enemyType = 0;        // Plain Slime
+		}
+		else if (rand < 0.38f) {  // 19% chance
+			enemyType = 1;        // Fast Slime
+		}
+		else if (rand < 0.57f) {  // 19% chance
+			enemyType = 2;        // Super Fast Slime
+		}
+		else if (rand < 0.76f) {  // 19% chance
+			enemyType = 3;        // Tough Slime
+		}
+		else if (rand < 0.95f) {  // 19% chance
+			enemyType = 4;        // Magic Slime
+		}
+		else if (rand < 0.99f) {  // 4% chance
+			enemyType = 5;        // Strong Slime
+		}
+		else {                    // 1% chance
+			enemyType = 6;        // King Slime
+		}
+
+		return enemyType;
+	}
+
+	private int GetEnemyRank() {
+		
+		if (rankPhase == 8) {
+			return rankPhase;
+		}
+
+		int minBattles = (rankPhase - 1) * 10 + 9;
+		int maxBattles = (rankPhase - 1) * 10 + 13;
+
+		if (battleNo == maxBattles) {
+			rankPhase++;
+		}
+		else if (battleNo >= minBattles) {
+			float rand = Random.value;
+			if (rand < 0.4f) {
+				rankPhase++;
+			}
+		}
+
+		return rankPhase;
+	}
+
+	private string GetEnemyName(int index) {
+		switch (index) {
+			case 0: return "PlainSlime";
+			case 1: return "FastSlime";
+			case 2: return "SuperFastSlime";
+			case 3: return "ToughSlime";
+			case 4: return "MagicSlime";
+			case 5: return "StrongSlime";
+			case 6: return "KingSlime";
+			default: return "PlainSlime";
+		}
+	}
+
+	void Update() {
+		if (Application.loadedLevel != 2) {
+			return;
+		}
+
+		// Check if player is allowed to make a play
+		ToggleBoard(enableBoard());
+
+		if (GameManager.instance.inMenu) {
+			return;
+		}
+
+		if (enemy == null) {
+			player.PlayRunAnim();
+			SpawnNextEnemy();
+		}
+
+		if (GameManager.instance.enableInteraction && Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Ended) {
+			Vector3 pos = Camera.main.ScreenToWorldPoint (Input.GetTouch(0).position);
+			RaycastHit2D hit = Physics2D.Raycast(pos, Vector2.zero);
+			
+			if (hit && hit.transform.gameObject.tag == "Tile") {
+				int row = hit.transform.gameObject.GetComponent<Tile>().GetRow();
+				int column = hit.transform.gameObject.GetComponent<Tile>().GetColumn();
+				int tileType = hit.transform.gameObject.GetComponent<Tile>().GetTileType();
+				PlayTurn (row, column, tileType);
+			}
+		}
+		
+		if (GameManager.instance.enableInteraction && Input.GetMouseButtonUp(0)) {
+			Vector3 posMouse = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+			RaycastHit2D hitMouse = Physics2D.Raycast(posMouse, Vector2.zero);
+
+			if (hitMouse && hitMouse.transform.gameObject.tag == "Tile") {
+				int row = hitMouse.transform.gameObject.GetComponent<Tile>().GetRow();
+				int column = hitMouse.transform.gameObject.GetComponent<Tile>().GetColumn();
+				int tileType = hitMouse.transform.gameObject.GetComponent<Tile>().GetTileType();
+				PlayTurn (row, column, tileType);
+			}
+		}
+	}
+}

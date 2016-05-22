@@ -1,0 +1,1045 @@
+fileFormatVersion: 2
+guid: cd29c675f61566948b2cb4d0550d6503
+timeCreated: 1458500248
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slimes_white_0
+    21300002: slimes_white_1
+    21300004: slimes_white_2
+    21300006: slimes_white_3
+    21300008: slimes_white_4
+    21300010: slimes_white_5
+    21300012: slimes_white_6
+    21300014: slimes_white_7
+    21300016: slimes_white_8
+    21300018: slimes_white_9
+    21300020: slimes_white_10
+    21300022: slimes_white_11
+    21300024: slimes_white_12
+    21300026: slimes_white_13
+    21300028: slimes_white_14
+    21300030: slimes_white_15
+    21300032: slimes_white_16
+    21300034: slimes_white_17
+    21300036: slimes_white_18
+    21300038: slimes_white_19
+    21300040: slimes_white_20
+    21300042: slimes_white_21
+    21300044: slimes_white_22
+    21300046: slimes_white_23
+    21300048: slimes_white_24
+    21300050: slimes_white_25
+    21300052: slimes_white_26
+    21300054: slimes_white_27
+    21300056: slimes_white_28
+    21300058: slimes_white_29
+    21300060: slimes_white_30
+    21300062: slimes_white_31
+    21300064: slimes_white_32
+    21300066: slimes_white_33
+    21300068: slimes_white_34
+    21300070: slimes_white_35
+    21300072: slimes_white_36
+    21300074: slimes_white_37
+    21300076: slimes_white_38
+    21300078: slimes_white_39
+    21300080: slimes_white_40
+    21300082: slimes_white_41
+    21300084: slimes_white_42
+    21300086: slimes_white_43
+    21300088: slimes_white_44
+    21300090: slimes_white_45
+    21300092: slimes_white_46
+    21300094: slimes_white_47
+    21300096: slimes_white_48
+    21300098: slimes_white_49
+    21300100: slimes_white_50
+    21300102: slimes_white_51
+    21300104: slimes_white_52
+    21300106: slimes_white_53
+    21300108: slimes_white_54
+    21300110: slimes_white_55
+    21300112: slimes_white_56
+    21300114: slimes_white_57
+    21300116: slimes_white_58
+    21300118: slimes_white_59
+    21300120: slimes_white_60
+    21300122: slimes_white_61
+    21300124: slimes_white_62
+    21300126: slimes_white_63
+    21300128: slimes_white_64
+    21300130: slimes_white_65
+    21300132: slimes_white_66
+    21300134: slimes_white_67
+    21300136: slimes_white_68
+    21300138: slimes_white_69
+    21300140: slimes_white_70
+    21300142: slimes_white_71
+    21300144: slimes_white_72
+    21300146: slimes_white_73
+    21300148: slimes_white_74
+    21300150: slimes_white_75
+    21300152: slimes_white_76
+    21300154: slimes_white_77
+    21300156: slimes_white_78
+    21300158: slimes_white_79
+    21300160: slimes_white_80
+    21300162: slimes_white_81
+    21300164: slimes_white_82
+    21300166: slimes_white_83
+    21300168: slimes_white_84
+    21300170: slimes_white_85
+    21300172: slimes_white_86
+    21300174: slimes_white_87
+    21300176: slimes_white_88
+    21300178: slimes_white_89
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slimes_white_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_13
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_14
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_16
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_23
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_24
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_25
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_26
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_30
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_32
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_34
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_35
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_38
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_39
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_40
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_41
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_42
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_43
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_44
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_46
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_47
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_48
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_49
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_50
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_51
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_52
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_53
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_55
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_56
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_57
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_59
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_60
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_61
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_62
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_64
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_66
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_67
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_68
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_69
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_70
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_71
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_73
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_74
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_75
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_76
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_77
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_78
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_79
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_80
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_82
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_83
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_84
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_85
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_86
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_87
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_88
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_white_89
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

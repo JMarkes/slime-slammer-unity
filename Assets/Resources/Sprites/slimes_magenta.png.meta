@@ -1,0 +1,1045 @@
+fileFormatVersion: 2
+guid: 9985142f20d48d641a7b9b8e054d609a
+timeCreated: 1458500173
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slimes_magenta_0
+    21300002: slimes_magenta_1
+    21300004: slimes_magenta_2
+    21300006: slimes_magenta_3
+    21300008: slimes_magenta_4
+    21300010: slimes_magenta_5
+    21300012: slimes_magenta_6
+    21300014: slimes_magenta_7
+    21300016: slimes_magenta_8
+    21300018: slimes_magenta_9
+    21300020: slimes_magenta_10
+    21300022: slimes_magenta_11
+    21300024: slimes_magenta_12
+    21300026: slimes_magenta_13
+    21300028: slimes_magenta_14
+    21300030: slimes_magenta_15
+    21300032: slimes_magenta_16
+    21300034: slimes_magenta_17
+    21300036: slimes_magenta_18
+    21300038: slimes_magenta_19
+    21300040: slimes_magenta_20
+    21300042: slimes_magenta_21
+    21300044: slimes_magenta_22
+    21300046: slimes_magenta_23
+    21300048: slimes_magenta_24
+    21300050: slimes_magenta_25
+    21300052: slimes_magenta_26
+    21300054: slimes_magenta_27
+    21300056: slimes_magenta_28
+    21300058: slimes_magenta_29
+    21300060: slimes_magenta_30
+    21300062: slimes_magenta_31
+    21300064: slimes_magenta_32
+    21300066: slimes_magenta_33
+    21300068: slimes_magenta_34
+    21300070: slimes_magenta_35
+    21300072: slimes_magenta_36
+    21300074: slimes_magenta_37
+    21300076: slimes_magenta_38
+    21300078: slimes_magenta_39
+    21300080: slimes_magenta_40
+    21300082: slimes_magenta_41
+    21300084: slimes_magenta_42
+    21300086: slimes_magenta_43
+    21300088: slimes_magenta_44
+    21300090: slimes_magenta_45
+    21300092: slimes_magenta_46
+    21300094: slimes_magenta_47
+    21300096: slimes_magenta_48
+    21300098: slimes_magenta_49
+    21300100: slimes_magenta_50
+    21300102: slimes_magenta_51
+    21300104: slimes_magenta_52
+    21300106: slimes_magenta_53
+    21300108: slimes_magenta_54
+    21300110: slimes_magenta_55
+    21300112: slimes_magenta_56
+    21300114: slimes_magenta_57
+    21300116: slimes_magenta_58
+    21300118: slimes_magenta_59
+    21300120: slimes_magenta_60
+    21300122: slimes_magenta_61
+    21300124: slimes_magenta_62
+    21300126: slimes_magenta_63
+    21300128: slimes_magenta_64
+    21300130: slimes_magenta_65
+    21300132: slimes_magenta_66
+    21300134: slimes_magenta_67
+    21300136: slimes_magenta_68
+    21300138: slimes_magenta_69
+    21300140: slimes_magenta_70
+    21300142: slimes_magenta_71
+    21300144: slimes_magenta_72
+    21300146: slimes_magenta_73
+    21300148: slimes_magenta_74
+    21300150: slimes_magenta_75
+    21300152: slimes_magenta_76
+    21300154: slimes_magenta_77
+    21300156: slimes_magenta_78
+    21300158: slimes_magenta_79
+    21300160: slimes_magenta_80
+    21300162: slimes_magenta_81
+    21300164: slimes_magenta_82
+    21300166: slimes_magenta_83
+    21300168: slimes_magenta_84
+    21300170: slimes_magenta_85
+    21300172: slimes_magenta_86
+    21300174: slimes_magenta_87
+    21300176: slimes_magenta_88
+    21300178: slimes_magenta_89
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slimes_magenta_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_13
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_14
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_16
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_23
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_24
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_25
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_26
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_30
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_32
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_34
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_35
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_38
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_39
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_40
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_41
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_42
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_43
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_44
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_46
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_47
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_48
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_49
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_50
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_51
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_52
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_53
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_55
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_56
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_57
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_59
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_60
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_61
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_62
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_64
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_66
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_67
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_68
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_69
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_70
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_71
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_73
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_74
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_75
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_76
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_77
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_78
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_79
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_80
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_82
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_83
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_84
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_85
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_86
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_87
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_88
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_magenta_89
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

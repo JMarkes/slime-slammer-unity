@@ -1,0 +1,365 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class Player : Character {
+
+	public AudioClip attackAction;
+	public AudioClip magicAction;
+	public AudioClip healAction;
+	public AudioClip goldAction;
+	public AudioClip enemyAttack;
+	public AudioClip enemyKill;
+	public AudioClip levelUp;
+	public AudioClip enraged;
+	public AudioClip walk;
+
+	private Color32 white = new Color32(255,255,255,255);
+	private Color32 hpGreen = new Color32(50,230,50,255);
+	private Color32 expGold = new Color32(240,187,14,255);
+	private Color32 goldYellow = new Color32(255,255,0,255);
+
+	private const int MAX_LEVEL = 99;
+	private const int STAT_MAX_RANK = 99;
+	private const int MAX_GOLD = 999999;
+
+	private int level;
+	private int currentExp;
+	private int expToNextLevel;
+
+	private int weaponRank;
+	private int magicRank;
+	private int armorRank;
+
+	private int gold;
+	private int monstersSlain;
+	private int bestMonstersSlain;
+
+	private Animator animator;
+	private Rigidbody2D rb2D;
+	private SpriteRenderer sprite;
+	private ParticleSystem playerPS;
+
+	private Text playerHpText;
+	private Slider playerHpBar;
+	private Slider expBar;
+	private Text goldText;
+	private Text levelText;
+	private Text monstersSlainCounter;
+
+	private Enemy enemy;
+
+	private Vector3 originPos = new Vector3(-25, 250, -9);
+	//private Vector3 closeEnemyPos = new Vector3(0, 250, -9);
+	private Vector3 awayEnemyPos = new Vector3(-65, 250, -9);
+	
+	protected override void Awake() {
+		base.Awake();
+
+		animator = GetComponent<Animator>();
+		rb2D = GetComponent<Rigidbody2D>();
+		sprite = GetComponent<SpriteRenderer>();
+
+		if (Application.loadedLevel == 2) {
+			playerPS = GameObject.Find("PlayerPS").GetComponent<ParticleSystem>();
+		}
+
+		playerHpText = GameObject.Find("PlayerHPText").GetComponent<Text>();
+		playerHpBar = GameObject.Find("PlayerHPBar").GetComponent<Slider>();
+		playerHpBar.maxValue = MAXHP;
+
+		expBar = GameObject.Find("ExpBar").GetComponent<Slider>();
+		expBar.value = currentExp;
+		expBar.maxValue = expToNextLevel;
+
+		goldText = GameObject.Find("GoldText").GetComponent<Text>();
+		levelText = GameObject.Find ("LevelText").GetComponent<Text>();
+
+		if (Application.loadedLevel == 2) {
+			monstersSlainCounter = GameObject.Find ("MonstersSlainCounter").GetComponent<Text>();
+			monstersSlain = 0;
+		}
+
+		UpdateUI();
+	}
+
+	public void ReceiveDamage(int damage) {
+		StartCoroutine(ReceiveDamageCoroutine(damage));
+	}
+
+	private IEnumerator ReceiveDamageCoroutine(int damage) {
+		SoundManager.instance.PlaySingle(enemyAttack);
+		StartCoroutine(GameManager.instance.FlashSprite(sprite, Color.red));
+		GameManager.instance.InstantiateRisingLabel(new Vector3 (-8,300,0), damage.ToString(), 35, white);
+		yield return StartCoroutine(HitAnim(originPos, awayEnemyPos, 25));
+		HP -= damage;
+		if (HP <= 0) {
+			HP = 0;
+			StartCoroutine(CheckGameOver());
+		}
+		UpdateUI();
+	}
+
+	public void Heal(int healAmount) {
+		SoundManager.instance.PlaySingle(healAction);
+		StartCoroutine(GameManager.instance.FlashSprite(sprite, Color.green));
+		GameManager.instance.InstantiateRisingLabel(new Vector3 (-8,300,0), "+" + healAmount.ToString() + "<size=28>HP</size>", 35, hpGreen);
+		HP += healAmount;
+		if (HP > MAXHP) {
+			HP = MAXHP;
+		}
+	}
+
+	public void GetGold(int gold) {
+		GameManager.instance.InstantiateRisingLabel(new Vector3 (-8,300,0), "+" + gold + "<size=28>G</size>", 35, goldYellow);
+
+		if ((this.gold + gold) > MAX_GOLD) {
+			this.gold = MAX_GOLD;
+		} else {
+			this.gold += gold;
+		}
+	}
+
+	public void GetExp(int exp) {
+		GameManager.instance.InstantiateRisingLabel(new Vector3 (-8,300,0), "+" + exp.ToString() + "<size=28>Exp</size>", 35, expGold);
+
+		// Skip if already at max level
+		if (level == MAX_LEVEL) {
+			return;
+		}
+
+		if ((currentExp + exp) < expToNextLevel) {
+			currentExp += exp;
+		} else {
+			int remainderExp = exp - (expToNextLevel - currentExp);
+			currentExp = expToNextLevel;
+			UpdateUI();
+			StartCoroutine(LevelUp(remainderExp));
+		}
+
+		SaveGame();
+		UpdateUI();
+	}
+
+	private IEnumerator LevelUp(int remainderExp) {
+		GameManager.instance.levelUp = true;
+		yield return new WaitForSeconds(1);
+		SoundManager.instance.PlaySingle(levelUp);
+		playerPS.Play();
+		GameManager.instance.InstantiateRisingLabel(new Vector3 (-8,300,0), "Level Up!", 35, expGold);
+		yield return new WaitForSeconds(2);
+		GameManager.instance.levelUp = false;
+		level++;
+		currentExp = remainderExp;
+		expToNextLevel = level * 100;
+		
+		SaveGame();
+		UpdateUI();
+	}
+
+	public bool CanUpgrade(int stat) {
+		if (stat == 0) {
+			return (weaponRank < STAT_MAX_RANK && level > weaponRank && gold >= weaponRank * 100) ? true : false;
+		}
+		else if (stat == 1) {
+			return (magicRank < STAT_MAX_RANK && level > magicRank && gold >= magicRank * 100) ? true : false;
+		}
+		else if (stat == 2) {
+			return (armorRank < STAT_MAX_RANK && level > armorRank && gold >= armorRank * 100) ? true : false;
+		}
+		
+		return false;
+	}
+
+	private IEnumerator CheckGameOver() {
+		if (HP <= 0) {
+			SoundManager.instance.PlaySingle(enemyKill);
+			GameManager.instance.playerDead = true;
+			while(transform.position.y < 600) {
+				transform.Translate(-15,15,0, Space.World);
+				rb2D.MoveRotation(rb2D.rotation + 60);
+				yield return null;
+			}
+			ShowGameOverScreen();
+		}
+	}
+
+	private void ShowGameOverScreen() {
+		GameManager.instance.disableMenu = true;
+
+		GameObject gameOverPanel = GameObject.Find ("GameOverPanel");
+		gameOverPanel.transform.localPosition = Vector3.zero;
+
+		string message = "Total Slimes Slammed\n" + "<size=80><color=\"#E62828\">" + monstersSlain + "</color></size>\n"; 
+		if (monstersSlain > bestMonstersSlain) {
+			bestMonstersSlain = monstersSlain;
+			message += "NEW HIGH SCORE!!";
+		} else {
+			message += "High Score\n<size=40>" + bestMonstersSlain + "</size>";
+		}
+
+		Text scoreText = GameObject.Find ("ScoreText").GetComponent<Text>();
+		scoreText.text = message;
+	}
+
+	public IEnumerator QuitQuest() {
+		GameManager.instance.playerDead = true;
+		yield return StartCoroutine(GameManager.instance.FadeOut(1));
+		SaveGame();
+		Application.LoadLevel(1);
+	}
+
+	public void SaveGame() {
+		PlayerPrefs.SetInt("MAX_HP", MAXHP);
+		PlayerPrefs.SetInt("LEVEL", level);
+		PlayerPrefs.SetInt("CURRENT_EXP", currentExp);
+		PlayerPrefs.SetInt("WEAPON_RANK", weaponRank);
+		PlayerPrefs.SetInt("MAGIC_RANK", magicRank);
+		PlayerPrefs.SetInt("ARMOR_RANK", armorRank);
+		PlayerPrefs.SetInt("GOLD", gold);
+		PlayerPrefs.SetInt("MONSTERS_SLAIN", bestMonstersSlain);
+		PlayerPrefs.Save();
+	}
+
+	public void LoadGame() {
+		// If it's the first time playing use starting values, else load saved stats
+		if (PlayerPrefs.HasKey("LEVEL")) {
+			MAXHP = PlayerPrefs.GetInt("MAX_HP");
+			level = PlayerPrefs.GetInt("LEVEL");
+			currentExp = PlayerPrefs.GetInt("CURRENT_EXP");
+			weaponRank = PlayerPrefs.GetInt("WEAPON_RANK");
+			magicRank = PlayerPrefs.GetInt("MAGIC_RANK");
+			armorRank = PlayerPrefs.GetInt("ARMOR_RANK");
+			gold = PlayerPrefs.GetInt("GOLD");
+			bestMonstersSlain = PlayerPrefs.GetInt("MONSTERS_SLAIN");
+
+			GameManager.firstTimePlaying = false;
+		} else {
+			MAXHP = 100;
+			level = 1;
+			currentExp = 0;
+			weaponRank = 1;
+			magicRank = 1;
+			armorRank = 1;
+			gold = 0;
+			bestMonstersSlain = 0;
+		}
+		
+		HP = MAXHP;
+		playerHpBar.maxValue = MAXHP;
+		playerHpBar.value = HP;
+
+		if (level < MAX_LEVEL) {
+			expToNextLevel = level * 100;
+		} else {
+			expToNextLevel = 0;
+		}
+
+		UpdateUI();
+	}
+
+	public void PlayIdleAnim() {
+		animator.SetTrigger("playerIdle");
+		GameManager.instance.playerRunning = false;
+	}
+
+	public void PlayRunAnim() {
+		animator.SetTrigger("playerRun");
+		GameManager.instance.playerRunning = true;
+	}
+
+	public IEnumerator PlayAttackAnim() {
+		animator.SetTrigger("playerAttack");
+		//float animLength = animator.GetCurrentAnimatorStateInfo(0).length;
+		yield return new WaitForSeconds(0.2f);
+	}
+
+	public IEnumerator PlayMagicAnim() {
+		animator.SetTrigger("playerMagic");
+		//float animLength = animator.GetCurrentAnimatorStateInfo(0).length;
+		yield return new WaitForSeconds(0.4f);
+	}
+
+	public IEnumerator MoveCoroutine(Vector3 end, float speed) {
+		while (true) {
+			transform.position = Vector3.MoveTowards(transform.position, end, speed);
+			
+			// If the object has arrived, stop the coroutine
+			if (transform.position == end) {
+				yield break;
+			}
+			
+			// Otherwise, continue next frame
+			yield return null;
+		}
+	}
+	
+	private IEnumerator HitAnim (Vector3 start, Vector3 end, float speed) {
+		// Move away from the player
+		yield return StartCoroutine(MoveCoroutine(end, speed));
+		
+		// Move back to origin position
+		yield return StartCoroutine(MoveCoroutine(start, speed));
+	}
+
+	public void UpdateUI() {
+		playerHpText.text = "<size=20>HP: </size>" + HP;
+		playerHpBar.value = HP;
+		expBar.maxValue = expToNextLevel;
+		expBar.value = currentExp;
+		goldText.text = "| GOLD: " + gold;
+
+		if (level < MAX_LEVEL) {
+			levelText.text = "<size=34>Lv " + level + "</size> | " + "Next level in: " + (expToNextLevel - currentExp) + " Exp";
+		} else {
+			levelText.text = "<size=34>Lv " + level + "</size> | " + "MAX LEVEL";
+		}
+
+		if (Application.loadedLevel == 2) {
+			monstersSlainCounter.text = "" + monstersSlain;
+		}
+	}
+
+	public int GetLevel() {
+		return level;
+	}
+
+	public int GetGold() {
+		return gold;
+	}
+
+	public int GetWeaponRank() {
+		return weaponRank;
+	}
+
+	public int GetMagicRank() {
+		return magicRank;
+	}
+
+	public int GetArmorRank() {
+		return armorRank;
+	}
+
+	public void UpgradeWeaponRank() {
+		gold -= weaponRank * 100;
+		weaponRank++;
+	}
+
+	public void UpgradeMagicRank() {
+		gold -= magicRank * 100;
+		magicRank++;
+	}
+
+	public void UpgradeArmorRank() {
+		gold -= armorRank * 100;
+		armorRank++;
+		MAXHP = 100 + (armorRank - 1) * 10;
+		HP = MAXHP;
+		playerHpBar.maxValue = MAXHP;
+		playerHpBar.value = HP;
+	}
+
+	public void IncrementMonstersSlain() {
+		monstersSlain++;
+	}
+}

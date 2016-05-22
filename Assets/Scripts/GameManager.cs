@@ -1,0 +1,365 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class GameManager : MonoBehaviour {
+
+	public AudioClip townMusic;
+	public AudioClip battleMusicOrchestral;
+	public AudioClip battleMusicDigital;
+	public AudioClip tapSound;
+
+    public static GameManager instance = null;
+	public static bool firstTimePlaying = true;
+
+    [HideInInspector]
+    public bool enableInteraction = true;
+    [HideInInspector]
+    public bool playerRunning = false;
+    [HideInInspector]
+    public bool tilesDropping = false;
+    [HideInInspector]
+    public bool charAnimPlaying = false;
+    [HideInInspector]
+    public bool playerDead = false;
+    [HideInInspector]
+    public bool enemyDead = true;
+    [HideInInspector]
+    public bool levelUp = false;
+    [HideInInspector]
+    public bool inMenu = false;
+    [HideInInspector]
+    public bool disableMenu = false;
+
+	[HideInInspector]
+	public enum DayState {Day, Sunset, Dusk, Night};
+	[HideInInspector]
+	public DayState dayState;
+
+	private SpriteRenderer bgDay;
+	private SpriteRenderer bgSunset;
+	private SpriteRenderer bgDusk;
+	private SpriteRenderer bgNight;
+
+	private int dayCicleCount = 0;
+
+	private Color32 white = new Color(1,1,1);
+	private Color weaponBlue = new Color(0,0.596f,0.796f);
+	private Color magicPurple = new Color(0.941f,0.090f,0.886f);
+	private Color armorGreen = new Color(0.218f,0.847f,0.094f);
+	private Color alphaOffset = new Color(0,0,0,0.005f);
+	private Color opaque = new Color(1,1,1,1);
+	
+    private Transform popUpTextHolder;
+    private TownManager townManager;
+    private BoardManager boardManager;
+    private Player player;
+    private GameObject fadeOutPanel;
+    private Image fopAlpha;
+
+	// Prevents music from restarting when going from Title Screen to Town Screen
+	private bool fromTitleScreen = true;
+
+    void Awake () {
+
+        if (instance == null) {
+            instance = this;
+        }
+        else if (instance != this) {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+
+		//PlayerPrefs.DeleteAll(); // WARNING: REMOVE ON PRODUCTION!!!
+
+        StartCoroutine(LoadTitleScene());
+    }
+
+    public IEnumerator LoadTitleScene() {
+        yield return StartCoroutine(GameManager.instance.FadeIn(1));
+        Application.LoadLevel(0);
+    }
+
+    public IEnumerator LoadTownScene() {
+        yield return StartCoroutine(GameManager.instance.FadeOut(1));
+        Application.LoadLevel(1);
+    }
+
+    private void InitTownScene() {
+        StartCoroutine(GameManager.instance.FadeIn(1));
+
+		popUpTextHolder = GameObject.Find("PopUpTextHolder").GetComponent<Transform>();
+
+        townManager = GetComponent<TownManager>();
+        townManager.Init();
+        townManager.UpdateUI();
+
+		if (firstTimePlaying) {
+			inMenu = true;
+			GameObject menuPanel = GameObject.Find("MenuPanel");
+			menuPanel.transform.localPosition = Vector3.zero;
+			GameObject introPanel = GameObject.Find("IntroPanel");
+			introPanel.transform.localPosition = Vector3.zero;
+		}
+    }
+
+    private void InitBattleScene() {
+        StartCoroutine(GameManager.instance.FadeIn(1));
+
+        popUpTextHolder = GameObject.Find("PopUpTextHolder").GetComponent<Transform>();
+
+        boardManager = GetComponent<BoardManager>();
+        boardManager.CreateBoard();
+    }
+
+    public void StartQuest() {
+        SaveGame();
+        Application.LoadLevel(2);
+    }
+
+    public void UpgradeStat(int stat) {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if (!player.CanUpgrade(stat)) {
+            return;
+        }
+
+		SoundManager.instance.PlaySingle(player.levelUp);
+
+		UpgradeStatEffect(stat);
+
+        if (stat == 0) {
+            player.UpgradeWeaponRank();
+        }
+        else if (stat == 1) {
+            player.UpgradeMagicRank();
+        }
+        else if (stat == 2) {
+            player.UpgradeArmorRank();
+        }
+
+        player.SaveGame();
+        townManager.UpdateUI();
+    }
+
+    void OnLevelWasLoaded(int index) {
+
+		if (index != 0) {
+			bgDay = GameObject.Find("BgDay").GetComponent<SpriteRenderer>();
+			bgSunset = GameObject.Find("BgSunset").GetComponent<SpriteRenderer>();
+			bgDusk = GameObject.Find("BgDusk").GetComponent<SpriteRenderer>();
+			bgNight = GameObject.Find("BgNight").GetComponent<SpriteRenderer>();
+		}
+
+		// Title Scene
+		if (index == 0) {
+			SoundManager.instance.PlayMusic(townMusic);
+		}
+
+		// Town Scene
+        if (index == 1) {
+			if (fromTitleScreen) {
+				fromTitleScreen = false;
+			} else {
+				SoundManager.instance.PlayMusic(townMusic);
+			}
+            LoadGame();
+            GameManager.instance.playerDead = false;
+			InitDayCicle();
+            InitTownScene();
+        }
+		// Battle Scene
+        else if(index == 2) {
+			float rand = Random.value;
+			if (rand < 0.9f) {
+				SoundManager.instance.PlayMusic(battleMusicOrchestral);
+			} else {
+				SoundManager.instance.PlayMusic(battleMusicDigital);
+			}
+            LoadGame();
+			InitDayCicle();
+            InitBattleScene();
+        }
+    }
+
+    private void SaveGame() {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.SaveGame();
+    }
+
+    private void LoadGame() {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player.LoadGame();
+    }
+
+    public BoardManager GetBoardManager() {
+        return boardManager;
+    }
+
+    public IEnumerator FadeIn(float speed) {
+        disableMenu = true;
+
+        fadeOutPanel = GameObject.Find("FadeOutPanel");
+        fopAlpha = fadeOutPanel.GetComponent<Image>();
+
+        fadeOutPanel.transform.localPosition = Vector3.zero;
+
+        for (float a = 1.0f; a > 0.0f; a -= Time.deltaTime * speed) {
+            fopAlpha.color = new Color(0,0,0,a);
+            yield return null;
+        }
+
+        fadeOutPanel.transform.localPosition = new Vector3(0,1000,0);
+
+        disableMenu = false;
+    }
+
+    public IEnumerator FadeOut(float speed) {
+        disableMenu = true;
+
+        fadeOutPanel = GameObject.Find("FadeOutPanel");
+        fopAlpha = fadeOutPanel.GetComponent<Image>();
+
+        fadeOutPanel.transform.localPosition = Vector3.zero;
+
+        for (float a = 0.0f; a < 1.0f; a += Time.deltaTime * speed) {
+            fopAlpha.color = new Color(0,0,0,a);
+            yield return null;
+        }
+
+        disableMenu = false;
+    }
+
+    public IEnumerator FlashSprite(SpriteRenderer sprite, Color color) {
+        Color newColor;
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime * 2f) {
+            newColor = new Color(Mathf.Lerp(color.r,1,t),Mathf.Lerp(color.g,1,t),Mathf.Lerp(color.b,1,t),1);
+            sprite.color = newColor;
+            yield return null;
+        }
+    }
+
+    public void InstantiateRisingLabel(Vector3 position, string message, int size, Color32 color) {
+        StartCoroutine(RisingLabelCourotine(position, message, size, color));
+    }
+
+    private IEnumerator RisingLabelCourotine(Vector3 position, string message, int size, Color32 color) {
+        GameObject label = InstantiateText(position, message, size, color, "TextRisingUpCtrl");
+        yield return new WaitForSeconds(0.75f);
+        Destroy(label);
+    }
+
+    public GameObject InstantiateText(Vector3 position, string message, int size, Color32 color, string animation) {
+        GameObject textInstance;
+
+        textInstance = Instantiate(Resources.Load("Prefabs/TextPrefab"), position, Quaternion.identity) as GameObject;
+        textInstance.GetComponent<Text>().text = message;
+        textInstance.GetComponent<Text>().fontSize = size;
+        textInstance.GetComponent<Text>().color = color;
+        textInstance.GetComponent<Animator>().runtimeAnimatorController = Resources.Load("Animations/" + animation) as RuntimeAnimatorController;
+
+        GameObject animationParent;
+        animationParent = new GameObject();
+        animationParent.transform.localPosition = position;
+        animationParent.transform.SetParent(popUpTextHolder, false);
+
+        textInstance.transform.SetParent(animationParent.transform, false);
+
+        return animationParent;
+    }
+
+	public void UpgradeStatEffect(int stat) {
+		ParticleSystem upgradePS = GameObject.Find("UpgradePS").GetComponent<ParticleSystem>();
+		
+		if (stat == 0) {
+			GameManager.instance.InstantiateRisingLabel(new Vector3 (8,300,0), "WEAPON\nUPGRADED!", 30, white);
+			upgradePS.startColor = weaponBlue;
+			upgradePS.Play();
+		}
+		else if (stat == 1) {
+			GameManager.instance.InstantiateRisingLabel(new Vector3 (8,300,0), "MAGIC\nUPGRADED!", 30, white);
+			upgradePS.startColor = magicPurple;
+			upgradePS.Play();
+		}
+		else if (stat == 2) {
+			GameManager.instance.InstantiateRisingLabel(new Vector3 (8,300,0), "ARMOR\nUPGRADED!", 30, white);
+			upgradePS.startColor = armorGreen;
+			upgradePS.Play();
+		}
+	}
+
+	public IEnumerator FadeOutMusic()
+	{
+		AudioSource audioMusic = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<AudioSource>();
+
+		while (audioMusic.volume > 0.01f) {
+			audioMusic.volume -= Time.deltaTime / 2.5f;
+			yield return null;
+		}
+
+		audioMusic.volume = 0;
+	}
+
+	private void InitDayCicle() {
+		int initialDayState = Random.Range(0,4);
+
+		switch (initialDayState) {
+			case (int) DayState.Day:
+				dayState = DayState.Day;
+				bgDay.color = opaque;
+				break;
+			case (int) DayState.Sunset:
+				dayState = DayState.Sunset;
+				bgSunset.color = opaque;
+				break;
+			case (int) DayState.Dusk:
+				dayState = DayState.Dusk;
+				bgDusk.color = opaque;
+				break;
+			case (int) DayState.Night:
+				dayState = DayState.Night;
+				bgNight.color = opaque;
+				break;
+		}
+	}
+
+	void Update() {
+		if (Application.loadedLevel != 0) {
+			if (dayCicleCount < 30) {
+				dayCicleCount++;
+				return;
+			}
+			dayCicleCount = 0;
+
+			if (dayState == DayState.Day) {
+				bgDay.color -= alphaOffset;
+				bgSunset.color += alphaOffset;
+				if (bgSunset.color.a >= 1) {
+					dayState = DayState.Sunset;
+				}
+			}
+			else if (dayState == DayState.Sunset) {
+				bgSunset.color -= alphaOffset;
+				bgDusk.color += alphaOffset;
+				if (bgDusk.color.a >= 1) {
+					dayState = DayState.Dusk;
+				}
+			}
+			else if (dayState == DayState.Dusk) {
+				bgDusk.color -= alphaOffset;
+				bgNight.color += alphaOffset;
+				if (bgNight.color.a >= 1) {
+					dayState = DayState.Night;
+				}
+			}
+			else if (dayState == DayState.Night) {
+				bgNight.color -= alphaOffset;
+				bgDay.color += alphaOffset;
+				if (bgDay.color.a >= 1) {
+					dayState = DayState.Day;
+				}
+			}
+		}
+	}
+}

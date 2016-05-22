@@ -1,0 +1,1045 @@
+fileFormatVersion: 2
+guid: 82ea1d6d0f2123741a3f445d13373337
+timeCreated: 1458500146
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: slimes_blue_0
+    21300002: slimes_blue_1
+    21300004: slimes_blue_2
+    21300006: slimes_blue_3
+    21300008: slimes_blue_4
+    21300010: slimes_blue_5
+    21300012: slimes_blue_6
+    21300014: slimes_blue_7
+    21300016: slimes_blue_8
+    21300018: slimes_blue_9
+    21300020: slimes_blue_10
+    21300022: slimes_blue_11
+    21300024: slimes_blue_12
+    21300026: slimes_blue_13
+    21300028: slimes_blue_14
+    21300030: slimes_blue_15
+    21300032: slimes_blue_16
+    21300034: slimes_blue_17
+    21300036: slimes_blue_18
+    21300038: slimes_blue_19
+    21300040: slimes_blue_20
+    21300042: slimes_blue_21
+    21300044: slimes_blue_22
+    21300046: slimes_blue_23
+    21300048: slimes_blue_24
+    21300050: slimes_blue_25
+    21300052: slimes_blue_26
+    21300054: slimes_blue_27
+    21300056: slimes_blue_28
+    21300058: slimes_blue_29
+    21300060: slimes_blue_30
+    21300062: slimes_blue_31
+    21300064: slimes_blue_32
+    21300066: slimes_blue_33
+    21300068: slimes_blue_34
+    21300070: slimes_blue_35
+    21300072: slimes_blue_36
+    21300074: slimes_blue_37
+    21300076: slimes_blue_38
+    21300078: slimes_blue_39
+    21300080: slimes_blue_40
+    21300082: slimes_blue_41
+    21300084: slimes_blue_42
+    21300086: slimes_blue_43
+    21300088: slimes_blue_44
+    21300090: slimes_blue_45
+    21300092: slimes_blue_46
+    21300094: slimes_blue_47
+    21300096: slimes_blue_48
+    21300098: slimes_blue_49
+    21300100: slimes_blue_50
+    21300102: slimes_blue_51
+    21300104: slimes_blue_52
+    21300106: slimes_blue_53
+    21300108: slimes_blue_54
+    21300110: slimes_blue_55
+    21300112: slimes_blue_56
+    21300114: slimes_blue_57
+    21300116: slimes_blue_58
+    21300118: slimes_blue_59
+    21300120: slimes_blue_60
+    21300122: slimes_blue_61
+    21300124: slimes_blue_62
+    21300126: slimes_blue_63
+    21300128: slimes_blue_64
+    21300130: slimes_blue_65
+    21300132: slimes_blue_66
+    21300134: slimes_blue_67
+    21300136: slimes_blue_68
+    21300138: slimes_blue_69
+    21300140: slimes_blue_70
+    21300142: slimes_blue_71
+    21300144: slimes_blue_72
+    21300146: slimes_blue_73
+    21300148: slimes_blue_74
+    21300150: slimes_blue_75
+    21300152: slimes_blue_76
+    21300154: slimes_blue_77
+    21300156: slimes_blue_78
+    21300158: slimes_blue_79
+    21300160: slimes_blue_80
+    21300162: slimes_blue_81
+    21300164: slimes_blue_82
+    21300166: slimes_blue_83
+    21300168: slimes_blue_84
+    21300170: slimes_blue_85
+    21300172: slimes_blue_86
+    21300174: slimes_blue_87
+    21300176: slimes_blue_88
+    21300178: slimes_blue_89
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: slimes_blue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_1
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_2
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_3
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_4
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_5
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_6
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_7
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_8
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 1044
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_11
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_12
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_13
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_14
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_15
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_16
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_17
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 928
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_19
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_20
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_21
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_22
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_23
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_24
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_25
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_26
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 812
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_29
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_30
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_31
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_32
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_33
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_34
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_35
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 696
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_37
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_38
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_39
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_40
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_41
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_42
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_43
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_44
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 580
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_46
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_47
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_48
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_49
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_50
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_51
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_52
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_53
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 464
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_55
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_56
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_57
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_59
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_60
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_61
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_62
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 348
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_64
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_65
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_66
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_67
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_68
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_69
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_70
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_71
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 232
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_73
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_74
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_75
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_76
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_77
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_78
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_79
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_80
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 116
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_82
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_83
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_84
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_85
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_86
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_87
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_88
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: slimes_blue_89
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 130
+        height: 116
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

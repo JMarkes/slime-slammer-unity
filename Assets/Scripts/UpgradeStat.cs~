@@ -1,0 +1,22 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class UpgradeStat : MonoBehaviour {
+
+	public void onClick(Button button) {
+		Debug.Log("onClick UpgradeStatButton");
+		if (button.name == "WeaponRankUpButton") {
+			Debug.Log("WeaponRankUpButton");
+			GameManager.instance.UpgradeStat(0);
+		}
+		else if (button.name == "MagicRankUpButton") {
+			Debug.Log("MagicRankUpButton");
+			GameManager.instance.UpgradeStat(1);
+		}
+		else if (button.name == "ArmorRankUpButton") {
+			Debug.Log("ArmorRankUpButton");
+			GameManager.instance.UpgradeStat(2);
+		}
+	}
+}

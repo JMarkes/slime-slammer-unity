@@ -1,0 +1,11 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+public class TitleScreen : MonoBehaviour {
+
+	public void onClick() {
+		Debug.Log("hey");
+		StartCoroutine(GameManager.instance.LoadTownScene());
+	}
+}
